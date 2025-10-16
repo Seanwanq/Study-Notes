@@ -15,7 +15,8 @@
   }  
 }
 
-#title()
+#text(weight: "bold", size: 20pt)[Study Notebook]
+
 Siyuan Wang
 
 #outline()
