@@ -40,7 +40,7 @@ $
   -hbar^2/(2m) [1/r^2 pdv(,r) (r^2 pdv(psi,r)) + 1/(r^2 sin theta) pdv(, theta) (sin theta pdv(psi, theta)) + 1/(r^2 sin^2 theta) (pdv(psi, phi.alt, 2))] + V psi = E psi.
 $
 
-#image("./image.png", width: 50%)
+#image("./figures/image.png", width: 50%)
 
 We only look for such kind of solutions:
 $
