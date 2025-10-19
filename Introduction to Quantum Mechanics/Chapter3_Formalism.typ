@@ -44,13 +44,13 @@ So that's all we need for the above conclusion.
 
 And
 $
- Phi(p,t) &= braket(p, S(t))\
- &= braket(p, (integral dd(x) ketbra(x)), S(t))\
- &= integral braket(p, x) braket(x, S(t)) dd(x)\
- &= integral braket(p, x) Psi(x, t) dd(x)\
- &= integral braket(x, p)^* Psi(x, t) dd(x) \
- &= integral f_p (x)^* Psi(x, t) dd(x) \
- Phi(p, t) &= 1/sqrt(2 pi hbar)  integral e^(-i p x slash hbar) Psi(x, t) dd(x).
+  Phi(p, t) & = braket(p, S(t)) \
+            & = braket(p, (integral dd(x) ketbra(x)), S(t)) \
+            & = integral braket(p, x) braket(x, S(t)) dd(x) \
+            & = integral braket(p, x) Psi(x, t) dd(x) \
+            & = integral braket(x, p)^* Psi(x, t) dd(x) \
+            & = integral f_p (x)^* Psi(x, t) dd(x) \
+  Phi(p, t) & = 1/sqrt(2 pi hbar) integral e^(-i p x slash hbar) Psi(x, t) dd(x).
 $
 
 Also
@@ -122,9 +122,9 @@ $
 
 For position & momentum
 
-$ hat(x) -> cases(x "(in position space)", i hbar pdv(,p) "(in momentum space)") $
+$ hat(x) -> cases(x "(in position space)", i hbar pdv(, p) "(in momentum space)") $
 
-$ hat(p) -> cases(p "(in momentum space)", -i hbar pdv(,x) "(in position space)") $
+$ hat(p) -> cases(p "(in momentum space)", -i hbar pdv(, x) "(in position space)") $
 
 The projection operator onto the one-dimensional subspace spanned by $ket(alpha)$
 $ hat(P) equiv ketbra(alpha) $
@@ -147,19 +147,19 @@ $
 
 Power series expansion:
 $
-  e^hat(Q) &equiv 1 + hat(Q) + 1/2 hat(Q)^2 + 1/3! hat(Q)^3 + ...\
-  1/(1 - hat(Q)) &equiv 1 + hat(Q) + hat(Q)^2 + hat(Q)^3 + hat(Q)^4 + ...\
-  ln(1 + hat(Q)) &equiv hat(Q) - 1/2 hat(Q)^2 + 1/3 hat(Q)^3 - 1/4 hat(Q)^4 + ...
+        e^hat(Q) & equiv 1 + hat(Q) + 1/2 hat(Q)^2 + 1/3! hat(Q)^3 + ... \
+  1/(1 - hat(Q)) & equiv 1 + hat(Q) + hat(Q)^2 + hat(Q)^3 + hat(Q)^4 + ... \
+  ln(1 + hat(Q)) & equiv hat(Q) - 1/2 hat(Q)^2 + 1/3 hat(Q)^3 - 1/4 hat(Q)^4 + ...
 $
 
 $
-  braket(x, hat(x), S(t)) &= "action of position operator in" x "basis" = x Psi(x, t)\
-  braket(p, hat(x), S(t)) &= "action of position operator in" p "basis" = i hbar pdv(Phi, p).
+  braket(x, hat(x), S(t)) & = "action of position operator in" x "basis" = x Psi(x, t) \
+  braket(p, hat(x), S(t)) & = "action of position operator in" p "basis" = i hbar pdv(Phi, p).
 $
 
 $
-  braket(p, hat(x), S(t)) &= integral hat(x) Psi(x, t) braket(p, x) dd(x) \
-  &= integral x Psi(x, t) 1/sqrt(2 pi hbar) e^(-i p x slash hbar) dd(x)\
-  &= i hbar pdv(, p) integral (e^(-i p x slash hbar)) / (sqrt(2 pi hbar)) Psi(x, t) dd(x)\
-  &= i hbar pdv(, p) Phi(p, t).
+  braket(p, hat(x), S(t)) & = integral hat(x) Psi(x, t) braket(p, x) dd(x) \
+                          & = integral x Psi(x, t) 1/sqrt(2 pi hbar) e^(-i p x slash hbar) dd(x) \
+                          & = i hbar pdv(, p) integral (e^(-i p x slash hbar)) / (sqrt(2 pi hbar)) Psi(x, t) dd(x) \
+                          & = i hbar pdv(, p) Phi(p, t).
 $
