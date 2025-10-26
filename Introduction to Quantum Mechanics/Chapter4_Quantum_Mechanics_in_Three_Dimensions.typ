@@ -1,5 +1,5 @@
 #import "@preview/physica:0.9.6": *
-#let hbar = sym.planck
+#let hbar = sym.planck.reduce
 
 == Quantum Mechanics in Three Dimensions
 
@@ -154,12 +154,62 @@ $
   integral_0^oo abs(u)^2 dd(r) = 1.
 $
 
+=== Electromagnetic Interactions
 
+In classical electrodynamics, the Lorentz force law
+$
+  bold(F) = q (bold(E) + bold(v) times bold(B)).
+$
+The classical Hamiltonian
+$
+  H = 1/(2m) (bold(p) - q bold(A))^2 + a phi,
+$
+where $bold(A)$ is the vector potential, $phi$ is the scalar potential
+$
+  bold(E) = -bold(nabla) phi - partial bold(A) slash partial t,\
+  bold(B) = bold(nabla) times bold(A).
+$
+and $bold(p) -> -i hbar nabla$,
+$
+  hat(H) = 1/(2m) (-i hbar bold(nabla) - q bold(A))^2 + q phi,
+$
+the Schrodinger equation
+$
+  i hbar pdv(Psi, t) = [1/(2m) (-i hbar bold(nabla) - q bold(A))^2 + q phi] Psi.
+$
 
+With gauge transformation,
+$
+  phi' equiv phi - pdv(Lambda, t),\
+  bold(A)' equiv bold(A) + nabla Lambda,
+$
+where $Lambda$ is an arbitrary real function of position and time.
 
+The transformation won't affect $bold(B)$ and $bold(E)$, but will give a phase change to the state:
+$
+  Psi' equiv e^(i q Lambda slash hbar) Psi.
+$
 
+The *Aharonov-Bohm Effect* is very interesting. It describes that: The vector potential can affect the quantum behavior of a charged particle, even when the particle is confined to a region where the field itself is zero.
 
+#image("figures/image_2.png")
 
+The recombined state has a phase difference because
+$
+  Psi = e^(i g) Psi',
+$
+where
+$
+  g(bold(r)) equiv q/hbar integral_cal(O)^bold(r) bold(A)(bold(r')) dot dd(bold(r')).
+$
+and with
+$
+  bold(A) = Phi/(2 pi r) hat(phi.alt), (r > a),
+$
+$
+  g = plus.minus (q Phi)/(2 hbar).
+$
+Plus means the same direction as the curent in the solenoid.
 
 
 

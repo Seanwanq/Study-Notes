@@ -1,5 +1,5 @@
 #import "@preview/physica:0.9.6": *
-#let hbar = sym.planck
+#let hbar = sym.planck.reduce
 
 == Formalism
 
